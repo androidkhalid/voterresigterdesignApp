@@ -48,6 +48,7 @@
         android:orientation="vertical" >
 
         <EditText
+            android:id="@+id/DaytimePhone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/editbackgra"
@@ -56,19 +57,18 @@
             android:maxLines="1"
             android:padding="5dip" />
 
-        
-
         <EditText
+            android:id="@+id/Email"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dip"
             android:background="@drawable/editbackgra"
             android:hint="Email (optional)"
-            android:imeOptions="actionNext"
-            android:textSize="16sp"
+            android:imeOptions="actionDone"
             android:lines="1"
             android:maxLines="1"
-            android:padding="5dip" />
+            android:padding="5dip"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="fill_parent"

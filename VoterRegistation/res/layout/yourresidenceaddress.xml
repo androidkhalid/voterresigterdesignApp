@@ -53,17 +53,19 @@
             android:gravity="center" >
 
             <EditText
+                android:id="@+id/StreetNumber"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".8"
                 android:background="@drawable/editbackgra"
                 android:hint="Street Number"
                 android:imeOptions="actionNext"
-                android:textSize="14sp"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/StreetName"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dip"
@@ -71,21 +73,22 @@
                 android:layout_weight="1"
                 android:background="@drawable/editbackgra"
                 android:hint="Street Name"
-                 android:textSize="16sp"
                 android:imeOptions="actionNext"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="16sp" />
 
             <EditText
+                android:id="@+id/Apt"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:background="@drawable/editbackgra"
                 android:hint="Apt"
-                   android:textSize="16sp"
                 android:imeOptions="actionNext"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -95,17 +98,19 @@
             android:gravity="center" >
 
             <EditText
+                android:id="@+id/CityTown"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/editbackgra"
                 android:hint="City / Town"
-                   android:textSize="16sp"
                 android:imeOptions="actionNext"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="16sp" />
 
             <EditText
+                android:id="@+id/ZipCode"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dip"
@@ -113,27 +118,26 @@
                 android:layout_weight=".7"
                 android:background="@drawable/editbackgra"
                 android:hint="Zip Code"
-                   android:textSize="14sp"
                 android:imeOptions="actionNext"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/County"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight=".7"
                 android:background="@drawable/editbackgra"
                 android:hint="County"
-                   android:textSize="16sp"
                 android:imeOptions="actionNext"
                 android:maxLines="1"
-                android:padding="5dip" />
+                android:padding="5dip"
+                android:textSize="16sp" />
         </TableRow>
 
-        
-
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxBaltimoreCityresident"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dip"

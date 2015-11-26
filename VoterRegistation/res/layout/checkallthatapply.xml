@@ -47,7 +47,7 @@
         android:orientation="vertical" >
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxNewRegistration"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:button="@drawable/customdrawablecheckbox"
@@ -57,11 +57,9 @@
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
-        
-        
-        
+
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxNameChange"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:button="@drawable/customdrawablecheckbox"
@@ -71,10 +69,9 @@
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
-        
-        
+
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxPartyAffiliationChange"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:button="@drawable/customdrawablecheckbox"
@@ -84,9 +81,9 @@
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
-        
-         <CheckBox
-            android:id="@+id/checkBox"
+
+        <CheckBox
+            android:id="@+id/checkBoxAddressChange"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:button="@drawable/customdrawablecheckbox"
