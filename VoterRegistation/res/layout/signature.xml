@@ -59,16 +59,16 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/SignatureCanvas"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dip"
             android:background="@drawable/editbackgra"
             android:hint="Signature"
-            android:id="@+id/SignatureCanvas"
             android:imeOptions="actionDone"
-            android:text="grgegthtrhhty"
             android:maxLines="1"
-            android:padding="5dip" />
+            android:padding="5dip"
+            android:text="" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -88,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
+                    android:onClick="setClear"
                     android:src="@drawable/clear" />
             </LinearLayout>
 
@@ -108,6 +109,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/currentDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"

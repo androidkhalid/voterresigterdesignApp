@@ -48,6 +48,7 @@
         android:orientation="vertical" >
 
         <EditText
+            android:id="@+id/LastName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/editbackgra"
@@ -57,6 +58,7 @@
             android:padding="5dip" />
 
         <EditText
+            android:id="@+id/FirstName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
@@ -67,6 +69,7 @@
             android:padding="5dip" />
 
         <EditText
+            android:id="@+id/MiddleName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
@@ -77,6 +80,7 @@
             android:padding="5dip" />
 
         <EditText
+            android:id="@+id/Suffix"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"

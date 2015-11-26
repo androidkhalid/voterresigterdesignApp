@@ -1,4 +1,4 @@
-package com.aapbd.voterregistration;
+package us.pdinc.oss.votereg.md;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-public class NameonLastRegistrationActivity extends Activity {
+public class PollingQuestionsActivity extends Activity {
 
 	private Context con;
 
@@ -15,7 +15,7 @@ public class NameonLastRegistrationActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.nameonlastregistration);
+		setContentView(R.layout.pollingquestions);
 		con = this;
 
 	}
@@ -25,14 +25,14 @@ public class NameonLastRegistrationActivity extends Activity {
 	}
 
 	public void setBack(View v) {
-		Intent next = new Intent(con, SignatureAcivity.class);
+		Intent next = new Intent(con, ContactInfoActivity.class);
 		startActivity(next);
 		finish();
 
 	}
 
 	public void setNext(View v) {
-		Intent next = new Intent(con, AddressonLastRegistrationActivity.class);
+		Intent next = new Intent(con, SignatureAcivity.class);
 		startActivity(next);
 		finish();
 	}

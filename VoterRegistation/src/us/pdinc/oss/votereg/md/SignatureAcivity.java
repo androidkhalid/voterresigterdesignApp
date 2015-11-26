@@ -1,27 +1,34 @@
-package com.aapbd.voterregistration;
+package us.pdinc.oss.votereg.md;
 
-import java.io.FileOutputStream;
+import java.util.Calendar;
 
+import us.pdinc.oss.votereg.md.utls.AlertMessage;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignatureAcivity extends Activity {
 
 	private Context con;
 	private EditText signature;
+	private TextView Output;
+	private int year;
+	private int month;
+	private int day;
+	static final int DATE_PICKER_ID = 1111;
+	String clear;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +36,16 @@ public class SignatureAcivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.signature);
 		con = this;
+		Output = (TextView) findViewById(R.id.currentDate);
 		signature = (EditText) findViewById(R.id.SignatureCanvas);
-//		if (signature.getText() == null) {
-//			writeTestBitmap(signature.getText().toString());
-//		}
+		// if (signature.getText() == null) {
+		// writeTestBitmap(signature.getText().toString());
+		// }
+
+		clear = signature.getText().toString();
+
 		canvas();
+		setDate();
 
 	}
 
@@ -48,42 +60,44 @@ public class SignatureAcivity extends Activity {
 
 	}
 
-	public void setNext(View v) {
-		Intent next = new Intent(con, NameonLastRegistrationActivity.class);
-		startActivity(next);
-		finish();
+	public void setClear(View v) {
+
+		signature.setText("");
 	}
 
-	public void writeTestBitmap(String text) {
-		// font size
-		float fontSize = new EditText(con).getTextSize();
-		fontSize += fontSize * 0.2f;
-		// paint to write text with
-		Paint paint = new Paint();
-		paint.setStyle(Style.FILL);
-		paint.setColor(Color.DKGRAY);
-		paint.setAntiAlias(true);
-		paint.setTypeface(Typeface.SERIF);
-		paint.setTextSize((int) fontSize);
-		// min. rect of text
-		Rect textBounds = new Rect();
-		paint.getTextBounds(text, 0, text.length(), textBounds);
-		// create bitmap for text
-		Bitmap bm = Bitmap.createBitmap(textBounds.width(),
-				textBounds.height(), Bitmap.Config.ARGB_8888);
-		// canvas
-		Canvas canvas = new Canvas();
-		//canvas.drawARGB(255, 0, 255, 0);// for visualization
-		// y = ?
-		// canvas.drawText(text, 0, textBounds.height(), paint);
-		canvas.drawText(text, 0, canvas.getHeight(), paint);
-		Toast.makeText(con, text, 1000).show();
-		// try {
-		// FileOutputStream out = new FileOutputStream(fileName);
-		// bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
+	public void setNext(View v) {
+		checkData();
+	}
+
+	public void checkData() {
+		if (TextUtils.isEmpty(signature.getText().toString().trim())) {
+			AlertMessage.showMessage(con, getString(R.string.Status),
+					getString(R.string.Signature));
+			return;
+		} else {
+			Intent next = new Intent(con, NameonLastRegistrationActivity.class);
+			startActivity(next);
+			finish();
+		}
+
+	}
+
+	private void setDate() {
+		// TODO Auto-generated method stub
+		final Calendar c = Calendar.getInstance();
+		year = c.get(Calendar.YEAR);
+		month = c.get(Calendar.MONTH);
+		day = c.get(Calendar.DAY_OF_MONTH);
+
+		// Show current date
+
+		Output.setText(new StringBuilder()
+				// Month is 0 based, just add 1
+				.append(month + 1).append("-").append(day).append("-")
+				.append(year).append(" "));
+
+		// Button listener to show date picker dialog
+
 	}
 
 	public void canvas() {

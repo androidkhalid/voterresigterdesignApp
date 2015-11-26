@@ -48,6 +48,7 @@
         android:orientation="vertical" >
 
         <EditText
+            android:id="@+id/DriversLicenseid"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/editbackgra"
@@ -57,7 +58,7 @@
             android:padding="5dip" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxID"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dip"
@@ -70,19 +71,20 @@
             android:textStyle="bold" />
 
         <EditText
+              android:id="@+id/SocialSecurity"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
             android:background="@drawable/editbackgra"
             android:hint="Social Security Number(last 4 digits)"
             android:imeOptions="actionNext"
-            android:textSize="16sp"
             android:lines="1"
             android:maxLines="1"
-            android:padding="5dip" />
+            android:padding="5dip"
+            android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxSSN"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dip"

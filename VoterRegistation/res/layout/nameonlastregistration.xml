@@ -48,6 +48,7 @@
         android:orientation="vertical" >
 
         <EditText
+            android:id="@+id/LastNameOn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/editbackgra"
@@ -57,6 +58,7 @@
             android:padding="5dip" />
 
         <EditText
+            android:id="@+id/FirstNameOn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
@@ -65,8 +67,7 @@
             android:imeOptions="actionNext"
             android:maxLines="1"
             android:padding="5dip" />
-        
-        
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -80,25 +81,26 @@
                 android:gravity="center"
                 android:orientation="vertical" >
 
-                  <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-          
-            android:background="@drawable/editbackgra"
-            android:hint="Middle Name"
-            android:imeOptions="actionNext"
-            android:maxLines="1"
-            android:padding="5dip" />
+                <EditText
+                    android:id="@+id/MiddleNameOn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbackgra"
+                    android:hint="Middle Name"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:padding="5dip" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:background="@drawable/editbackgra"
-            android:hint="Title"
-            android:imeOptions="actionNext"
-            android:maxLines="1"
-            android:padding="5dip" />
+                <EditText
+                    android:id="@+id/TitleNameOn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/editbackgra"
+                    android:hint="Title"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:padding="5dip" />
             </LinearLayout>
 
             <LinearLayout
@@ -106,31 +108,31 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".6"
                 android:gravity="center"
+                android:padding="5dip"
                 android:orientation="vertical" >
 
-                
-                <TextView
+                <Button
+                    android:id="@+id/changeDateNameOn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    
                     android:text="Birth Date"
                     android:textColor="#000000"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/OutputNameOn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="11/24/2015"
                     android:textColor="#000000"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-        
-
-      
 
         <LinearLayout
             android:layout_width="fill_parent"
